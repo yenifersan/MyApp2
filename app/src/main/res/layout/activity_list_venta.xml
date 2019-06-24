@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
@@ -17,56 +18,50 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fullname"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/txt_date"
-            android:layout_width="wrap_content"
+            android:layout_width="85dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:text="fecha"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/txt_rode"
-            android:layout_width="72dp"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/title_text"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="93dp"
-            android:layout_marginEnd="9dp"
-            android:text="Monto" />
+            android:layout_marginEnd="1dp"
+            android:text="2019/06/24"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/txt_provider"
-            android:layout_width="190dp"
+            android:layout_width="242dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txt_number"
             android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="195dp"
-            android:text="Proveedor" />
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="46dp"
+            android:text="Yenifer santiago pacheco"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_number"
-            android:layout_width="216dp"
+            android:layout_width="179dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/title_text"
+            android:layout_below="@+id/txt_provider"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="188dp"
-            android:text="numero" />
+            android:layout_marginStart="113dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="109dp"
+            android:text="0001425786452" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_baseline_visibility_24px" />
 
     </RelativeLayout>
 

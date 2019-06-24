@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:text="Listado"/>
+        android:text="Listado de "/>
 
     <View
         android:id="@+id/line_view"

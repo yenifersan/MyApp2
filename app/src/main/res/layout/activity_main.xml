@@ -4,42 +4,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="324dp">
-
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="165dp"
-            android:layout_height="22dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="165dp"
-            android:layout_marginEnd="226dp"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/text_2"
-            android:layout_width="165dp"
-            android:layout_height="22dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="227dp"
-            android:layout_marginEnd="220dp"
-            android:layout_weight="1"
-            android:text="TextView" />
-
-
-    </RelativeLayout>
-
-
-</LinearLayout>
+    tools:context=".activities.MainActivity"/>
