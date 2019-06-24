@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.DetailVentaActivity"></activity>
-        <activity android:name=".activities.ListVentaActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.ListVentaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,5 +19,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
