@@ -1,4 +1,4 @@
-package com.example.myapp.activities;
+package com.example.myapp.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,13 +6,11 @@ import android.os.Bundle;
 
 import com.example.myapp.R;
 
-
-public class DetailVentaActivity extends AppCompatActivity {
+public class ListVentaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_venta);
+        setContentView(R.layout.activity_list_venta);
     }
-
 }
