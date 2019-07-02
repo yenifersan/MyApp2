@@ -12,6 +12,7 @@ android:clickable="true"
 android:foreground="?android:attr/selectableItemBackground">
 
 <RelativeLayout
+    android:id="@+id/item_compra"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/cardview_shadow_end_color"

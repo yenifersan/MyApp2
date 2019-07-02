@@ -22,7 +22,7 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
         this.compras = new ArrayList<>();
     }
 
-    public void setProductos(List<Compra> productos){
+    public void setCompras(List<Compra> compras){
         this.compras = compras;
     }
 
@@ -55,7 +55,6 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
 
         viewHolder.cliente.setText(compra.getCliente());
         viewHolder.anumordcom.setText(compra.getAnumordcom());
-        viewHolder.afecordcom.setText(compra.getAfecordcom());
 
     }
 

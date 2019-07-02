@@ -34,14 +34,12 @@ public class MainActivity extends AppCompatActivity {
         comprasList.setLayoutManager(new LinearLayoutManager(this));
 
         comprasList.setAdapter(new ComprasAdapter());
-
         initialize();
     }
 
     private void initialize() {
 
         ApiService service = ApiServiceGenerator.createService(ApiService.class);
-
         Call<List<Compra>> call = service.getCompras();
 
         call.enqueue(new Callback<List<Compra>>() {
@@ -53,12 +51,11 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "HTTP status code: " + statusCode);
 
                     if (response.isSuccessful()) {
-
                         List<Compra> compras = response.body();
-                        Log.d(TAG, "productos: " + compras);
+                        Log.d(TAG, "compras: " + compras);
 
                         ComprasAdapter adapter = (ComprasAdapter) comprasList.getAdapter();
-                        adapter.setProductos(compras);
+                        adapter.setCompras(compras);
                         adapter.notifyDataSetChanged();
 
                     } else {
@@ -82,7 +79,4 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
-
 }
-
-

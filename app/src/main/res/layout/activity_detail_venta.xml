@@ -32,7 +32,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="30dp"
                 android:layout_weight="1"
-                android:text="DETALLE"
+                android:text="aprobar orden de compra"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -88,7 +88,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn_validar"
+            android:id="@+id/btn_aprobar"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="149dp"
             android:layout_height="59dp"
@@ -98,7 +98,7 @@
             android:layout_marginStart="6dp"
             android:layout_marginTop="420dp"
             android:layout_marginEnd="256dp"
-            android:text="validar" />
+            android:text="Aprobar" />
 
         <Button
             android:id="@+id/btn_negar"
@@ -113,19 +113,6 @@
             android:layout_marginEnd="7dp"
             android:text="negar" />
 
-
-        <CheckBox
-            android:id="@+id/checkbox_meat"
-            android:layout_width="154dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_provider"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="237dp"
-            android:layout_marginTop="193dp"
-            android:layout_marginEnd="19dp"
-            android:onClick="onCheckboxClicked"
-            android:text="confirmar " />
 
         <TextView
             android:id="@+id/textView"
@@ -205,11 +192,11 @@
             android:layout_marginStart="60dp"
             android:layout_marginTop="232dp"
             android:layout_marginEnd="13dp"
-            android:layout_toStartOf="@+id/button3"
+            android:layout_toStartOf="@+id/btn_document"
             android:src="@drawable/ic_baseline_visibility_24px" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_document"
             android:layout_width="179dp"
             android:layout_height="37dp"
             android:layout_below="@+id/textView7"

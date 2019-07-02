@@ -11,6 +11,6 @@ public interface ApiService {
     String API_BASE_URL = "http://192.168.1.245:9095";
 
     @GET("/compras")
-    Call<List<Compra>> getCompras();
+    Call<List<Compra>>getCompras();
 
 }
