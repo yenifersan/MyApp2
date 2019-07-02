@@ -55,7 +55,7 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
 
         viewHolder.cliente.setText(compra.getCliente());
         viewHolder.anumordcom.setText(compra.getAnumordcom());
-
+        viewHolder.afecordcom.setText(compra.getAfecordcom());
     }
 
     @Override

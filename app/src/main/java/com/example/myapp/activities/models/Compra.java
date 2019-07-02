@@ -4,12 +4,12 @@ public class Compra {
 
     private Integer id;
     private String anumordcom;
-    private Integer afecordcom;
+    private String afecordcom;
     private String cliente;
     private String formapago;
     private String moneda;
     private Double total;
-    private Integer estado;
+    private String estado;
 
     public Integer getId() {
         return id;
@@ -27,11 +27,11 @@ public class Compra {
         this.anumordcom = anumordcom;
     }
 
-    public Integer getAfecordcom() {
+    public String getAfecordcom() {
         return afecordcom;
     }
 
-    public void setAfecordcom(Integer afecordcom) {
+    public void setAfecordcom(String afecordcom) {
         this.afecordcom = afecordcom;
     }
 
@@ -67,11 +67,11 @@ public class Compra {
         this.total = total;
     }
 
-    public Integer getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(Integer estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 
