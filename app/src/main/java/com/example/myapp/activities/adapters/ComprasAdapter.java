@@ -1,5 +1,6 @@
 package com.example.myapp.activities.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapp.R;
+import com.example.myapp.activities.activities.DetailVentaActivity;
 import com.example.myapp.activities.models.Compra;
 
 import java.util.ArrayList;
@@ -27,10 +29,11 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
+// para la vista principal
         public TextView cliente;
         public TextView anumordcom;
         public TextView afecordcom;
+
 
 
         public ViewHolder(View itemView) {
@@ -38,6 +41,7 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
             cliente = itemView.findViewById(R.id.txt_cliente);
             anumordcom = itemView.findViewById(R.id.txt_anumordcom);
             afecordcom = itemView.findViewById(R.id.txt_afecordcom);
+
         }
     }
 
@@ -49,13 +53,28 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
 
         Compra compra = this.compras.get(position);
 
         viewHolder.cliente.setText(compra.getCliente());
         viewHolder.anumordcom.setText(compra.getAnumordcom());
         viewHolder.afecordcom.setText(compra.getAfecordcom());
+
+
+        //detalles
+
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener(){
+             @Override
+            public void onClick(View v){
+                Intent intent = new Intent(viewHolder.itemView.getContext(), DetailVentaActivity.class);
+                intent.putExtra("ID", compra.getId());
+                viewHolder.itemView.getContext().startActivity(intent);
+            }
+        });
+
+
+
     }
 
     @Override
