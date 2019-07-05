@@ -88,4 +88,5 @@ public class Compra {
                 ", estado=" + estado +
                 '}';
     }
+
 }

@@ -18,6 +18,9 @@ import java.util.List;
 
 public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHolder> {
 
+    private  static final String TAG = ComprasAdapter.class.getSimpleName();
+
+
     private List<Compra> compras;
 
     public ComprasAdapter(){
@@ -33,6 +36,7 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
         public TextView cliente;
         public TextView anumordcom;
         public TextView afecordcom;
+
 
 
 
@@ -55,11 +59,12 @@ public class ComprasAdapter extends RecyclerView.Adapter<ComprasAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int position) {
 
-        Compra compra = this.compras.get(position);
+        final Compra compra = this.compras.get(position);
 
         viewHolder.cliente.setText(compra.getCliente());
         viewHolder.anumordcom.setText(compra.getAnumordcom());
         viewHolder.afecordcom.setText(compra.getAfecordcom());
+
 
 
         //detalles

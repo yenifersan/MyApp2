@@ -1,7 +1,6 @@
 package com.example.myapp.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,8 +18,8 @@ import retrofit2.Response;
 
 public class DetailVentaActivity extends AppCompatActivity {
 
-
     private static final String TAG = DetailVentaActivity.class.getSimpleName();
+
     private Integer id;
     private TextView txt_anumordcom;
     private TextView txt_afecordcom;
@@ -28,8 +27,6 @@ public class DetailVentaActivity extends AppCompatActivity {
     private TextView txt_formapago;
     private TextView txt_moneda;
     private TextView txt_total;
-
-    private TextView txt_estado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +40,11 @@ public class DetailVentaActivity extends AppCompatActivity {
         txt_moneda= (TextView)findViewById(R.id.txt_moneda);
         txt_total= (TextView) findViewById(R.id.txt_total);
 
+
         id= getIntent().getExtras().getInt("ID");
 
         Log.e(TAG, "id:" + id);
+
         initialize();
     }
 
@@ -71,6 +70,8 @@ public class DetailVentaActivity extends AppCompatActivity {
                         txt_anumordcom.setText(compra.getAnumordcom());
                         txt_afecordcom.setText(compra.getAfecordcom());
                         txt_cliente.setText(compra.getCliente());
+
+
                         txt_formapago.setText(compra.getFormapago());
                         txt_moneda.setText(compra.getMoneda());
                         txt_total.setText("s/. "+compra.getTotal());
@@ -102,6 +103,10 @@ public class DetailVentaActivity extends AppCompatActivity {
 
     //metodo para aprobar la orden de compra mediante un checkbox
     public void onCheckboxClicked(View view) {
+
+
+
+
     }
 
 
