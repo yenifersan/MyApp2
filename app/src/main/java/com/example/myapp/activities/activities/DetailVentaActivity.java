@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapp.R;
-import com.example.myapp.activities.ApiService;
-import com.example.myapp.activities.ApiServiceGenerator;
+import com.example.myapp.activities.service.ApiService;
+import com.example.myapp.activities.service.ApiServiceGenerator;
 import com.example.myapp.activities.models.Compra;
 
 import retrofit2.Call;
@@ -21,25 +23,29 @@ public class DetailVentaActivity extends AppCompatActivity {
     private static final String TAG = DetailVentaActivity.class.getSimpleName();
 
     private Integer id;
-    private TextView txt_anumordcom;
-    private TextView txt_afecordcom;
-    private TextView txt_cliente;
-    private TextView txt_formapago;
-    private TextView txt_moneda;
-    private TextView txt_total;
+    private TextView anumordcom;
+    private TextView afecordcom;
+    private TextView cliente;
+    private TextView formapago;
+    private TextView moneda;
+    private TextView total;
+
+    private Button updateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_venta);
+        anumordcom=(TextView)findViewById(R.id.txt_anumordcom);
+        afecordcom=(TextView) findViewById(R.id.txt_afecordcom);
+        cliente=(TextView)findViewById(R.id.txt_cliente);
+        formapago=(TextView)findViewById(R.id.txt_formapago);
+        moneda= (TextView)findViewById(R.id.txt_moneda);
+        total= (TextView) findViewById(R.id.txt_total);
 
-        txt_anumordcom=(TextView)findViewById(R.id.txt_anumordcom);
-        txt_afecordcom=(TextView) findViewById(R.id.txt_afecordcom);
-        txt_cliente=(TextView)findViewById(R.id.txt_cliente);
-        txt_formapago=(TextView)findViewById(R.id.txt_formapago);
-        txt_moneda= (TextView)findViewById(R.id.txt_moneda);
-        txt_total= (TextView) findViewById(R.id.txt_total);
 
+        updateButton = findViewById(R.id.btn_aprobar);
+        updateButton.setOnClickListener( (v)->{ callUpdate();});
 
         id= getIntent().getExtras().getInt("ID");
 
@@ -51,6 +57,7 @@ public class DetailVentaActivity extends AppCompatActivity {
     private void initialize() {
 
         ApiService service = ApiServiceGenerator.createService(ApiService.class);
+
 
         Call<Compra>call = service.showCompra(id);
 
@@ -67,15 +74,14 @@ public class DetailVentaActivity extends AppCompatActivity {
                         Compra compra = response.body();
                         Log.d(TAG, "compra: " + compra);
 
-                        txt_anumordcom.setText(compra.getAnumordcom());
-                        txt_afecordcom.setText(compra.getAfecordcom());
-                        txt_cliente.setText(compra.getCliente());
+                        anumordcom.setText(compra.getAnumordcom());
+                        afecordcom.setText(compra.getAfecordcom());
+                        cliente.setText(compra.getCliente());
 
 
-                        txt_formapago.setText(compra.getFormapago());
-                        txt_moneda.setText(compra.getMoneda());
-                        txt_total.setText("s/. "+compra.getTotal());
-
+                        formapago.setText(compra.getFormapago());
+                        moneda.setText(compra.getMoneda());
+                        total.setText("s/. "+compra.getTotal());
 
 
                     } else {
@@ -100,14 +106,28 @@ public class DetailVentaActivity extends AppCompatActivity {
         });
     }
 
-
-    //metodo para aprobar la orden de compra mediante un checkbox
-    public void onCheckboxClicked(View view) {
-
-
+    public void callUpdate(){
 
 
     }
+
+
+    //metodo para aprobar la orden de compra mediante un checkbox
+    public void onCheckboxClicked(View view) {
+        boolean checked = ((CheckBox)view ).isChecked();
+        switch(view.getId()){
+            case R.id.checkbox_estado:
+                if(checked)
+
+                    Log.d(TAG, "la orden de compra es aprobada y el estado cambia a 1" );
+                else
+                    Log.d(TAG, "orden de compra en porceso de aprobación");
+                break;
+        }
+    }
+
+
+
 
 
 

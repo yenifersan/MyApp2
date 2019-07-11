@@ -18,8 +18,8 @@
         <RelativeLayout
             android:id="@+id/titulo"
             android:layout_width="match_parent"
-            android:background="@color/colorPrimaryDark"
-            android:layout_height="100dp">
+            android:layout_height="128dp"
+            android:background="@color/colorPrimaryDark">
 
             <TextView
                 android:id="@+id/txt_deta"
@@ -31,34 +31,58 @@
                 android:layout_marginStart="31dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="30dp"
-                android:textSize="20dp"
                 android:layout_weight="1"
                 android:text="Detalles de las ordenes de compra"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:textSize="20dp"
                 android:textStyle="bold" />
+
             <View
                 android:id="@+id/line_view"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/txt_deta"
-                android:backgroundTint="@color/white"
+                android:layout_marginBottom="10dp"
                 android:background="@android:color/darker_gray"
-                android:layout_marginBottom="10dp"/>
+                android:backgroundTint="@color/white" />
 
             <TextView
                 android:id="@+id/txt_afecordcom"
-                android:layout_width="wrap_content"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_deta"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="293dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="17dp"
-                android:textColor="@color/white"
                 android:text="Fecha"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_view"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="72dp"
+                android:layout_toStartOf="@+id/txt_anumordcom"
+                android:text="Número:"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_anumordcom"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_afecordcom"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="14dp"
+                android:text="TextView"
+                android:textColor="@color/white" />
         </RelativeLayout>
 
         <TextView
@@ -66,22 +90,25 @@
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/titulo"
-            android:layout_marginTop="216dp"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="216dp"
             android:layout_marginEnd="103dp"
             android:layout_toStartOf="@+id/txt_total"
             android:text="Monto:"
             android:textStyle="bold" />
 
 
-        <CheckBox android:id="@+id/checkbox_estado"
+        <CheckBox
+            android:id="@+id/checkbox_estado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_rode"
-            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
-            android:text="Aprobar orden de compra"
-            android:onClick="onCheckboxClicked"/>
+            android:layout_marginTop="20dp"
+            android:onClick="onCheckboxClicked"
+            android:text="Aprobar orden de compra" />
 
         <TextView
             android:id="@+id/text_provider"
@@ -90,7 +117,7 @@
             android:layout_below="@+id/titulo"
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="25dp"
             android:layout_toStartOf="@+id/txt_cliente"
             android:text="Proveedor:"
@@ -104,10 +131,10 @@
             android:layout_below="@+id/txt_provider"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="420dp"
-            android:layout_marginEnd="12dp"
-            android:text="Actualizar" />
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="430dp"
+            android:layout_marginEnd="18dp"
+            android:text="Aprobar" />
 
 
         <TextView
@@ -127,9 +154,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/titulo"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -147,13 +175,13 @@
             android:layout_width="242dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_cliente"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="154dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_toEndOf="@+id/textView4"
             android:text="TextView"
-          />
+            android:textSize="14dp" />
 
         <TextView
             android:id="@+id/textView6"
@@ -162,7 +190,7 @@
             android:layout_below="@+id/textView4"
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="Moneda:"
             android:textStyle="bold" />
 
@@ -173,7 +201,8 @@
             android:layout_below="@+id/txt_formapago"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:textSize="14dp"
             android:layout_marginEnd="16dp"
             android:layout_toEndOf="@+id/textView6"
             android:text="TextView" />
@@ -181,13 +210,13 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="86dp"
-            android:layout_height="48dp"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="232dp"
-            android:layout_marginEnd="13dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="263dp"
+            android:layout_marginEnd="20dp"
             android:layout_toStartOf="@+id/btn_document"
             android:src="@drawable/ic_baseline_visibility_24px" />
 
@@ -199,7 +228,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="6dp"
             android:layout_marginTop="38dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginEnd="55dp"
             android:background="@color/colorAccent"
             android:text="ver documentos"
             android:textColor="@color/white" />

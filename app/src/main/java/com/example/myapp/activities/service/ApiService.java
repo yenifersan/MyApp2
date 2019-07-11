@@ -1,4 +1,4 @@
-package com.example.myapp.activities;
+package com.example.myapp.activities.service;
 
 import com.example.myapp.activities.models.Compra;
 
@@ -10,15 +10,34 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface ApiService {
-    String API_BASE_URL = "http://192.168.1.245:9093";
+    String API_BASE_URL = "http://192.168.1.245:9097";
 
-    @GET("api/compras/")
+    @GET("/compras")
     Call<List<Compra>>getCompras();
 
-    @GET("api/compra/{1}")
+    @GET("/compras/{id}/")
     Call<Compra>showCompra(@Path("id")Integer id);
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

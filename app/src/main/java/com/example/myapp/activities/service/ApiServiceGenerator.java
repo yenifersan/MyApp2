@@ -1,4 +1,6 @@
-package com.example.myapp.activities;
+package com.example.myapp.activities.service;
+
+import com.example.myapp.activities.service.ApiService;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

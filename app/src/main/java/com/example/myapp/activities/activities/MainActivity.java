@@ -9,8 +9,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.myapp.R;
-import com.example.myapp.activities.ApiService;
-import com.example.myapp.activities.ApiServiceGenerator;
+import com.example.myapp.activities.service.ApiService;
+import com.example.myapp.activities.service.ApiServiceGenerator;
 import com.example.myapp.activities.adapters.ComprasAdapter;
 import com.example.myapp.activities.models.Compra;
 
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
                         ComprasAdapter adapter = (ComprasAdapter) comprasList.getAdapter();
                         adapter.setCompras(compras);
                         adapter.notifyDataSetChanged();
-
                     } else {
                         Log.e(TAG, "onError: " + response.errorBody().string());
                         throw new Exception("Error en el servicio");
